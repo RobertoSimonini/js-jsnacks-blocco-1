@@ -13,18 +13,25 @@ const allowedPeople = ['Pippo', 'Roberto', 'Claudio', 'Ciccio'];
 const nameElement = document.getElementById('username');
 const getInBtn = document.getElementById('get-in');
 const message = document.getElementById('message');
-// Aggiungo l'Event listener al bottone 
-getInBtn.addEventListener ('click', function(){
 
+
+
+// Aggiungo l'Event listener al bottone 
+
+getInBtn.addEventListener ('click', function(){
 // Prendo il value dell'input 
 nameValue = nameElement.value;
 
 // !Verifica 
-
 if (!nameValue) {
     message.innerText = 'Non hai inserito valori validi!'
     return;
 }
 
-
+if (allowedPeople.includes(nameValue)) {
+    message.innerText = 'Sei autorizzato ad accedere alla festa.'
+} else {
+    message.innerText = 'Non sei autorizzato ad accedere alla festa.'
+}  
+   
 });
