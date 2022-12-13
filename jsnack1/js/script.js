@@ -10,12 +10,12 @@ console.log('OK JS');
 let sum = 0;
 
 for (let i = 1; i <= 10; i++) {
-
 // Creo la variabile per chidere il numero 10 volte all'utente 
 let userNumber = parseInt(prompt('Inserisci un numero'));
 
 // Sommo i numeri dell'utente 
 sum += userNumber;
+console.log(userNumber);
 };
 
 // Stampo il risulato in console

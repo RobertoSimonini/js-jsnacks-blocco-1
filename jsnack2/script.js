@@ -28,10 +28,22 @@ if (!nameValue) {
     return;
 };
 
-if (allowedPeople.includes(nameValue)) {
+
+// Controllo che il nome sia presente nella lista degli invitati
+let isAllowed = false
+
+for (let i = 0; i < allowedPeople.length; i++) {
+    const currentName = allowedPeople[i];
+    if (currentName === nameValue) {
+        isAllowed = true;
+    }
+};
+
+if (isAllowed) {
     message.innerText = 'Sei autorizzato ad accedere alla festa.'
 } else {
     message.innerText = 'Non sei autorizzato ad accedere alla festa.'
-};  
+};
+
    
 });
