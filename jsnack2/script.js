@@ -26,12 +26,12 @@ nameValue = nameElement.value;
 if (!nameValue) {
     message.innerText = 'Non hai inserito valori validi!'
     return;
-}
+};
 
 if (allowedPeople.includes(nameValue)) {
     message.innerText = 'Sei autorizzato ad accedere alla festa.'
 } else {
     message.innerText = 'Non sei autorizzato ad accedere alla festa.'
-}  
+};  
    
 });
