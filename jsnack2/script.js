@@ -9,6 +9,22 @@
 // preparo l'array con i nomi dei partecipanti invitati 
 const allowedPeople = ['Pippo', 'Roberto', 'Claudio', 'Ciccio'];
 
-// Prendo dal Dom l'input e il bottone 
+// Prendo dal Dom l'input, il messaggio e il bottone 
 const nameElement = document.getElementById('username');
 const getInBtn = document.getElementById('get-in');
+const message = document.getElementById('message');
+// Aggiungo l'Event listener al bottone 
+getInBtn.addEventListener ('click', function(){
+
+// Prendo il value dell'input 
+nameValue = nameElement.value;
+
+// !Verifica 
+
+if (!nameValue) {
+    message.innerText = 'Non hai inserito valori validi!'
+    return;
+}
+
+
+});
