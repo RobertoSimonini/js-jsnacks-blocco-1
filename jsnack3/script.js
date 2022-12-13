@@ -21,8 +21,8 @@ btnSum.addEventListener ('click', function(){
 
 if ((!userNumberValue) || isNaN(userNumberValue)) {
     alert('Inserisci valori validi');
+    return;
 }
-
 
 
 });
