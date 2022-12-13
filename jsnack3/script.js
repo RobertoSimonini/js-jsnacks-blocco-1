@@ -20,8 +20,8 @@ btnSum.addEventListener ('click', function(){
 const userNumberValue = userNumber.value;
     
 // ! Verifica 
-if ((!userNumberValue) || isNaN(userNumberValue)) {
-    alert('Inserisci valori validi');
+if ((!userNumberValue) || isNaN(userNumberValue) || (userNumberValue.length < 4)) {
+    message.innerText = 'Inserisci valori validi o digita almeno 4 cifre'
     return;
 };
     
